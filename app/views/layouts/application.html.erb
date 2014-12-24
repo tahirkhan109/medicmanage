@@ -7,8 +7,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= render "/shared/header"  %>
+<div class="page-container">
+  <div id="flash_div">
+    <%= render :partial => "shared/flash_messages" %>
+  </div>
 
-<%= yield %>
+      <%= render "/shared/sidebar" %>
 
+
+  <%= yield %>
+</div>
 </body>
 </html>
+<script>
+
+    jQuery(document).ready(function() {
+        Metronic.init(); // init metronic core componets
+        Layout.init(); // init layout
+        QuickSidebar.init() // init quick sidebar
+//   Index.init();
+//   Index.initDashboardDaterange();
+    });
+</script>

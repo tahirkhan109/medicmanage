@@ -10,6 +10,24 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ *= require font-awesome/css/font-awesome.min
+ *= require simple-line-icons/simple-line-icons.min
+ *= require components
+ *= require bootstrap/css/bootstrap.min
+ *= require uniform/css/uniform.default
+ *= require bootstrap-switch/css/bootstrap-switch.min
+ *= require select2/select2.css
+ *= require datatables/plugins/bootstrap/dataTables.bootstrap
+ *= require gritter/css/jquery.gritter
+ *= require tasks
+ *= require plugins
+ *= require layout
+ *= require default
+ *= require custom
+ *= require apprise
+ *= require apprise-v2
  *= require_self
  */
+
+
+/**= require_tree .*/

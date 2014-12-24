@@ -7,17 +7,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% if current_user %>
 <%= render "/shared/header"  %>
-<div class="page-container">
+    <% end %>
+
+
+    <div class="page-container">
   <div id="flash_div">
     <%= render :partial => "shared/flash_messages" %>
   </div>
+      <% if current_user %>
 
-      <%= render "/shared/sidebar" %>
-
+    <%= render "/shared/sidebar" %>
+        <% end %>
 
   <%= yield %>
 </div>
+
+
 </body>
 </html>
 <script>
